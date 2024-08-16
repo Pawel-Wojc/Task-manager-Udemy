@@ -1,7 +1,6 @@
 @if (!results) {
 <p class="center">Please enter same values and press calculate</p>
-}
-@else {
+} @else {
 <table>
     <thead>
         <tr>
@@ -15,16 +14,13 @@
     <tbody>
         @for (result of results; track result.year) {
         <tr>
-            <td>{{result.year}}</td>
-            <td>{{result.interest | currency}}</td>
-            <td>{{result.valueEndOfYear | currency}}</td>
-            <td>{{result.totalInterest | currency}}</td>
-            <td>{{result.totalAmountInvested | currency}}</td>
+            <td>{{ result.year }}</td>
+            <td>{{ result.interest | currency }}</td>
+            <td>{{ result.valueEndOfYear | currency }}</td>
+            <td>{{ result.totalInterest | currency }}</td>
+            <td>{{ result.totalAmountInvested | currency }}</td>
         </tr>
         }
-
-
-
     </tbody>
 </table>
 
